@@ -320,5 +320,9 @@ fileUtilities.createJsonFromSif = function(){
     return sifToJson.convert(sifText);
     
 };
+ 
+ fileUtilities.getCurrentSif = function(){
+    return jsonToSif.convert();
+}
  return fileUtilities;
 };
