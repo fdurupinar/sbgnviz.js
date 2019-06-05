@@ -10,11 +10,13 @@ module.exports = function() {
   jsonToSif.convert = function() {
     var lines = [];
 
-    var edges = cy.edges().filter( function( edge ) {
-      return elementUtilities.isSIFEdge( edge )
-        && elementUtilities.isSIFNode( edge.source() )
-        && elementUtilities.isSIFNode( edge.target() );
-    } );
+    var edges = cy.edges();
+    //FUNDA: any edge can be a sif edge
+//     .filter( function( edge ) {
+//       return elementUtilities.isSIFEdge( edge )
+//         && elementUtilities.isSIFNode( edge.source() )
+//         && elementUtilities.isSIFNode( edge.target() );
+//     } );
 
     var nodes = cy.nodes().filter( function( node ) {
       return elementUtilities.isSIFNode( node );
