@@ -50,7 +50,9 @@ module.exports = function() {
       var pcIDs = setToStr( pcIDSet );
       var siteLocations = setToStr( siteLocSet );
 
-      var line = [ srcName, type, tgtName, pcIDs, siteLocations ].join( '\t' );
+       // var line = [ srcName, type, tgtName, pcIDs, siteLocations ].join( '\t' );
+        //FUNDA: for cwc
+       var line = [ srcName, type, tgtName, '', '' ].join( '\t' );
       lines.push( line );
     } );
 
